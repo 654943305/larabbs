@@ -81,6 +81,8 @@ class AuthorizationsController extends Controller
 
     public function update(Request $request)
     {
+        dd($request->all());
+
         $token = Auth::guard('api')->refresh();
         return $this->respondWithToken($token);
     }
