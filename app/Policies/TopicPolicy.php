@@ -9,6 +9,7 @@ class TopicPolicy extends Policy
 {
     public function update(User $user, Topic $topic)
     {
+        info(json_encode($topic));
         return $user->isAuthorOf($topic);
     }
 
