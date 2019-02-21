@@ -20,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
 
         // Carbon 中文化配置
         \Carbon\Carbon::setLocale('zh');
+
+        \Schema::defaultStringLength(191);
     }
 
     /**
