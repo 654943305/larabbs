@@ -32,7 +32,7 @@ $api->version('v1', [
             ->name('api.authorizations.store');
 
         // 小程序登录
-        $api->post('weapp/authorizations', 'Authorizationscontroller@weappStore')
+        $api->post('weapp/authorizations', 'AuthorizationsController@weappStore')
             ->name('api.weapp.authorizations.store');
         // 小程序注册
         $api->post('weapp/users', 'UsersController@weappStore')
