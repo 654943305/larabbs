@@ -32,7 +32,7 @@ $api->version('v1', [
             ->name('api.authorizations.store');
 
         // 小程序登录
-        $api->post('weapp/authorizations', 'AuthorizationsController@weappStore')
+        $api->post('weapp/authorizations', 'Authorizationscontroller@weappstore')
             ->name('api.weapp.authorizations.store');
         // 小程序注册
         $api->post('weapp/users', 'UsersController@weappStore')
@@ -44,6 +44,10 @@ $api->version('v1', [
         // 删除token
         $api->delete('authorizations/current', 'AuthorizationsController@destroy')
             ->name('api.authorizations.destroy');
+
+        // 用户详情
+        $api->get('users/{user}', 'UsersController@show')
+            ->name('api.users.show');
 
 
 
